@@ -6,7 +6,7 @@ from eth_utils import remove_0x_prefix
 from common_utils_py.agreements.service_agreement import ServiceAgreement
 from common_utils_py.agreements.service_factory import ServiceDescriptor, ServiceFactory
 from common_utils_py.agreements.service_types import ServiceTypes
-from common_utils_py.aquarius.aquarius import Aquarius
+from common_utils_py.metadata.metadata import Metadata
 from common_utils_py.ddo.ddo import DDO
 from common_utils_py.ddo.metadata import MetadataMain
 from common_utils_py.ddo.public_key_rsa import PUBLIC_KEY_TYPE_RSA
@@ -20,7 +20,7 @@ from tests.conftest import get_sample_ddo
 
 def get_registered_ddo(account, providers=None):
     keeper = keeper_instance()
-    aqua = Aquarius('http://localhost:5000')
+    aqua = Metadata('http://localhost:5000')
     metadata = get_sample_ddo()['service'][0]['attributes']
     metadata['main']['files'][0]['checksum'] = str(uuid.uuid4())
     ddo = DDO()
