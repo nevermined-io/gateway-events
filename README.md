@@ -78,10 +78,18 @@ and [python-style-guide](https://github.com/oceanprotocol/dev-ocean/blob/master/
 Automatic tests are setup via Travis, executing `tox`.
 Our test use pytest framework.
 
+
+## Attribution
+
+This project is based in the [Ocean Protocol Barge](https://github.com/oceanprotocol/barge). 
+It keeps the same Apache v2 License and adds some improvements. See [NOTICE file](NOTICE).
+
 ## License
 
 ```
-Copyright 2018 Ocean Protocol Foundation Ltd.
+Copyright 2020 Keyko GmbH
+This product includes software developed at
+BigchainDB GmbH and Ocean Protocol (https://www.oceanprotocol.com/)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -94,3 +102,5 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+```
+
