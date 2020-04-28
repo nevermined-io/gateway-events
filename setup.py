@@ -2,10 +2,6 @@
 # -*- coding: utf-8 -*-
 
 """The setup script."""
-
-#  Copyright 2018 Ocean Protocol Foundation
-#  SPDX-License-Identifier: Apache-2.0
-
 import os
 from os.path import join
 
@@ -20,8 +16,8 @@ with open('CHANGELOG.md') as history_file:
 # Installed by pip install ocean-events-handler
 # or pip install -e .
 install_requirements = [
-    'common-utils-py>=0.1.2',
-    'contracts-lib-py>=0.1.1',
+    'common-utils-py==0.1.3',
+    'contracts-lib-py==0.1.1',
     'ocean-secret-store-client==0.0.2',
     'PyYAML==4.2b4',
 ]

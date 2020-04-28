@@ -1,7 +1,3 @@
-#  Copyright 2018 Ocean Protocol Foundation
-#  SPDX-License-Identifier: Apache-2.0
-
-
 def verify_reward_tokens(event, agreement_id, did, service_agreement, price, consumer_address,
                          publisher_account):
     """
