@@ -1,5 +1,3 @@
-#  Copyright 2018 Ocean Protocol Foundation
-#  SPDX-License-Identifier: Apache-2.0
 import collections
 import logging
 
@@ -46,7 +44,7 @@ class AgreementsStorage(StorageBase):
         Records the given pending service agreement.
 
         :param agreement_id: hex str the id of the service agreement used as primary key
-        :param did: DID, str in the format `did:op:0xXXX`
+        :param did: DID, str in the format `did:nv:0xXXX`
         :param service_index: identifier of the service inside the asset DDO, str
         :param price: Asset price, int
         :param urls: hex str encrypted urls list

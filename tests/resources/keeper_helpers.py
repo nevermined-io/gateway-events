@@ -22,6 +22,7 @@ def get_registered_ddo(account, providers=None):
     keeper = keeper_instance()
     aqua = Metadata('http://localhost:5000')
     metadata = get_sample_ddo()['service'][0]['attributes']
+    metadata['main']['files'][0]['url'] = "https://raw.githubusercontent.com/tbertinmahieux/MSongsDB/master/Tasks_Demos/CoverSongs/shs_dataset_test.txt"
     metadata['main']['files'][0]['checksum'] = str(uuid.uuid4())
     ddo = DDO()
     ddo_service_endpoint = aqua.get_service_endpoint()
