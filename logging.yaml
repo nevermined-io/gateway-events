@@ -30,7 +30,7 @@ handlers:
     encoding: utf8
 
 loggers:
-  nevermind_gateway_events:
+  nevermined_gateway_events:
     level: INFO
     handlers: [console]
     propagate: no

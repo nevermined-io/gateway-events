@@ -4,7 +4,7 @@ import site
 from contracts_lib_py import Keeper
 from contracts_lib_py.web3_provider import Web3Provider
 
-from nevermind_gateway_events.config import Config
+from nevermined_gateway_events.config import Config
 
 
 def get_config():

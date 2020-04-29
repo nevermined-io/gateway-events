@@ -11,9 +11,9 @@ from common_utils_py.agreements.utils import get_sla_template
 from common_utils_py.did import id_to_did
 from common_utils_py.did_resolver.did_resolver import DIDResolver
 
-from nevermind_gateway_events.agreement_store.agreements import AgreementsStorage
-from nevermind_gateway_events.event_handlers import (accessSecretStore, lockRewardCondition,
-                                                 lockRewardExecutionCondition)
+from nevermined_gateway_events.agreement_store.agreements import AgreementsStorage
+from nevermined_gateway_events.event_handlers import (accessSecretStore, lockRewardCondition,
+                                                      lockRewardExecutionCondition)
 
 logger = logging.getLogger(__name__)
 

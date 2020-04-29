@@ -14,7 +14,7 @@ from common_utils_py.did import DID, did_to_id, did_to_id_bytes
 from common_utils_py.utils.utilities import checksum
 from secret_store_client.client import Client as SecretStore
 
-from nevermind_gateway_events.util import get_config, keeper_instance, web3
+from nevermined_gateway_events.util import get_config, keeper_instance, web3
 from tests.conftest import get_sample_ddo
 
 

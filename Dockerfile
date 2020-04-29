@@ -17,8 +17,8 @@ RUN apk add --no-cache --update\
     python3-dev \
   && pip install virtualenv
 
-COPY . /nevermind_gateway_events
-WORKDIR /nevermind_gateway_events
+COPY . /nevermined_gateway_events
+WORKDIR /nevermined_gateway_events
 
 RUN pip install .
 
@@ -31,4 +31,4 @@ ENV PROVIDER_PASSWORD=''
 ENV PROVIDER_KEYFILE=''
 ENV LOG_LEVEL=''
 
-ENTRYPOINT ["/nevermind_gateway_events/docker-entrypoint.sh"]
+ENTRYPOINT ["/nevermined_gateway_events/docker-entrypoint.sh"]

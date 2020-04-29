@@ -1,13 +1,13 @@
 [![banner](https://raw.githubusercontent.com/keyko-io/assets/master/images/logo/small/keyko_logo@2x-100.jpg)](https://keyko.io)
 
-# nevermind-gateway-events
+# Nevermined Gateway Events
 Provider's events handler agent dealing with Keeper Contract events
 
 
 ## Features
 Monitors ServiceExecutionAgreement events and act as a provider agent to 
 grant access and release reward for the publisher/provider. This is a critical 
-part in the process of consuming data sets in the Ocean Protocol network. 
+part in the process of consuming data sets in the Nevermined Protocol network. 
 Every provider in the network must run some sort of an events-handler to 
 be able to fulfill the access condition of an `Access` service in an `SEA` .
 
@@ -24,20 +24,20 @@ Python 3.6
 First, clone this repository:
 
 ```bash
-git clone git@github.com:keyko-io/nevermind-gateway-events.git
+git clone git@github.com:keyko-io/nevermined-gateway-events.git
 cd events-handler/
 ```
 
 Start a keeper node and other services of the ocean network:
 
 ```bash
-git clone git@github.com:keyko-io/nevermind-tools.git
+git clone git@github.com:keyko-io/nevermined-tools.git
 cd barge
-bash start_nevermind.sh --no-events-handler --no-commons --local-spree-node
+bash start_nevermined.sh --no-events-handler --no-commons --local-spree-node
 ```
 
 Barge is the repository where all the Ocean Docker Compose files are located. 
-We are running the script `start_nevermind.sh`: the easy way to have Ocean projects 
+We are running the script `start_nevermined.sh`: the easy way to have Ocean projects 
 up and running. We run without an events-handler instance because we will run it directly.
 
 To learn more about Barge, visit [the Barge repository](https://github.com/oceanprotocol/barge).
@@ -81,7 +81,7 @@ Our test use pytest framework.
 
 ## Attribution
 
-This project is based in the [Ocean Protocol Barge](https://github.com/oceanprotocol/barge). 
+This project is based in the [Ocean Protocol Events Handler](https://github.com/oceanprotocol/events-handler). 
 It keeps the same Apache v2 License and adds some improvements. See [NOTICE file](NOTICE).
 
 ## License

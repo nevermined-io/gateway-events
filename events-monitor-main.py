@@ -6,9 +6,9 @@ from contracts_lib_py.utils import get_account
 from contracts_lib_py.web3_provider import Web3Provider
 from contracts_lib_py.keeper import Keeper
 
-from nevermind_gateway_events.log import setup_logging
-from nevermind_gateway_events.provider_events_monitor import ProviderEventsMonitor
-from nevermind_gateway_events.util import get_config, get_keeper_path, init_account_envvars
+from nevermined_gateway_events.log import setup_logging
+from nevermined_gateway_events.provider_events_monitor import ProviderEventsMonitor
+from nevermined_gateway_events.util import get_config, get_keeper_path, init_account_envvars
 
 
 def run_events_monitor():

@@ -52,7 +52,7 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr .pytest_cache
 
 lint: ## check style with PyLint
-	pylint --errors-only nevermind_gateway_events tests
+	pylint --errors-only nevermined_gateway_events tests
 
 test: ## run tests quickly with the default Python
 	py.test
@@ -61,7 +61,7 @@ test-all: ## run tests on every Python version with tox
 	tox
 
 coverage: ## check code coverage quickly with the default Python
-	coverage run --source nevermind_gateway_events -m pytest
+	coverage run --source nevermined_gateway_events -m pytest
 	coverage report -m
 	coverage html
 	$(BROWSER) htmlcov/index.html

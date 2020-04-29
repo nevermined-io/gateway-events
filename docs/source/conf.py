@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-#  Copyright 2018 Ocean Protocol Foundation
-#  SPDX-License-Identifier: Apache-2.0
 
 #
 # Configuration file for the Sphinx documentation builder.
@@ -30,7 +28,7 @@ copyright = 'ocean-events-handler contributors'
 author = 'ocean-events-handler contributors'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1.1'
+release = '0.2.0'
 # The short X.Y version
 release_parts = release.split('.')  # a list
 version = release_parts[0] + '.' + release_parts[1]
@@ -48,7 +46,7 @@ extensions = [
 
 # apidoc settings
 # See https://github.com/sphinx-contrib/apidoc
-apidoc_module_dir = '../../nevermind_gateway_events'
+apidoc_module_dir = '../../nevermined_gateway_events'
 # apidoc_output_dir = 'api' by default, and leave it that way!
 apidoc_separate_modules = True
 # See https://www.sphinx-doc.org/en/master/man/sphinx-apidoc.html
