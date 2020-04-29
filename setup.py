@@ -16,8 +16,8 @@ with open('CHANGELOG.md') as history_file:
 # Installed by pip install ocean-events-handler
 # or pip install -e .
 install_requirements = [
-    'common-utils-py==0.1.3',
-    'contracts-lib-py==0.1.1',
+    'common-utils-py==0.2.0',
+    'contracts-lib-py==0.2.0',
     'ocean-secret-store-client==0.0.2',
     'PyYAML==4.2b4',
 ]
@@ -50,7 +50,7 @@ docs_requirements = [
 ]
 
 packages = []
-for d, _, _ in os.walk('nevermind_gateway_events'):
+for d, _, _ in os.walk('nevermined_gateway_events'):
     if os.path.exists(join(d, '__init__.py')):
         packages.append(d.replace(os.path.sep, '.'))
 
@@ -75,13 +75,13 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     include_package_data=True,
-    keywords='nevermind-gateway-events',
-    name='nevermind-gateway-events',
+    keywords='nevermined-gateway-events',
+    name='nevermined-gateway-events',
     packages=packages,
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/keyko-io/nevermind-gateway-events',
+    url='https://github.com/keyko-io/nevermined-gateway-events',
     version='0.1.1',
     zip_safe=False,
 )

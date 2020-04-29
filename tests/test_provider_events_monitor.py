@@ -3,7 +3,7 @@ import time
 from contracts_lib_py.web3_provider import Web3Provider
 from common_utils_py.agreements.service_agreement import ServiceAgreement
 
-from nevermind_gateway_events.provider_events_monitor import ProviderEventsMonitor
+from nevermined_gateway_events.provider_events_monitor import ProviderEventsMonitor
 from tests.conftest import get_consumer_account
 from tests.resources.keeper_helpers import (get_conditions_status, get_registered_ddo, grant_access,
                                             lock_reward, place_order)
