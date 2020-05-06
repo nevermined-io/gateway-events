@@ -79,7 +79,8 @@ class AgreementsStorage(StorageBase):
 
         :param agreement_id: hex str the id of the service agreement used as primary key
         :param condition_name: str name of agreement condition to update its status
-        :param status: int status of condition (0 Uninitialized, 1 Unfulfilled, 2 Fulfilled, 3 Aborted)
+        :param status: int status of condition (0 Uninitialized, 1 Unfulfilled, 2 Fulfilled,
+        3 Aborted)
         :return:
         """
         assert 1 <= status <= 3
@@ -157,7 +158,8 @@ class AgreementsStorage(StorageBase):
     def get_agreement_ids(self, since_block_number=0):
         """Return all known agreement ids.
 
-        :param since_block_number: int include all agreements with block number >= to this block number
+        :param since_block_number: int include all agreements with block number >= to this block
+        number
         """
         try:
             query = '''
