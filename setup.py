@@ -16,8 +16,8 @@ with open('CHANGELOG.md') as history_file:
 # Installed by pip install ocean-events-handler
 # or pip install -e .
 install_requirements = [
-    'common-utils-py==0.2.0',
-    'contracts-lib-py==0.2.0',
+    'common-utils-py==0.2.1',
+    'contracts-lib-py==0.2.2',
     'ocean-secret-store-client==0.0.2',
     'PyYAML==4.2b4',
 ]
@@ -82,6 +82,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/keyko-io/nevermined-gateway-events',
-    version='0.2.0',
+    version='0.2.1',
     zip_safe=False,
 )

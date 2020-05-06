@@ -1,9 +1,9 @@
 import logging
 
-from eth_utils import add_0x_prefix
+from common_utils_py.did import did_to_id
 from contracts_lib_py.keeper import Keeper
 from contracts_lib_py.utils import process_fulfill_condition
-from common_utils_py.did import did_to_id
+from eth_utils import add_0x_prefix
 
 logger = logging.getLogger(__name__)
 
@@ -48,7 +48,8 @@ def fulfill_access_secret_store_condition(event, agreement_id, did, service_agre
         consumer_address,
         publisher_account
     )
-    process_fulfill_condition(args, keeper.access_secret_store_condition, access_condition_id, logger, keeper, 10)
+    process_fulfill_condition(args, keeper.access_secret_store_condition, access_condition_id,
+                              logger, keeper, 10)
 
 
 fulfillAccessSecretStoreCondition = fulfill_access_secret_store_condition

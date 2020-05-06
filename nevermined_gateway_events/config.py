@@ -12,8 +12,11 @@ NAME_PARITY_URL = 'parity.url'
 environ_names = {
     NAME_KEEPER_URL: ['KEEPER_URL', 'Keeper URL'],
     NAME_KEEPER_PATH: ['KEEPER_PATH', 'Path to the keeper contracts'],
-    NAME_SECRET_STORE_URL: ['SECRET_STORE_URL', 'URL for Secret Store node handling the encryption keys storage.'],
-    NAME_PARITY_URL: ['PARITY_URL', 'URL of local secret-store enabled parity node handling encryption/decryption. ']
+    NAME_SECRET_STORE_URL: ['SECRET_STORE_URL',
+                            'URL for Secret Store node handling the encryption keys storage.'],
+    NAME_PARITY_URL: ['PARITY_URL',
+                      'URL of local secret-store enabled parity node handling '
+                      'encryption/decryption. ']
 }
 
 
@@ -76,7 +79,8 @@ class Config(configparser.ConfigParser):
     @property
     def secret_store_url(self):
         """URL of the secret store component. (e.g.): http://mysecretstore:12001."""
-        return self.get(self._section_name, NAME_SECRET_STORE_URL, fallback='http://localhost:12000')
+        return self.get(self._section_name, NAME_SECRET_STORE_URL,
+                        fallback='http://localhost:12000')
 
     @property
     def parity_url(self):
