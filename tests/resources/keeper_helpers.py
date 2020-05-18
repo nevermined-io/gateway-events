@@ -2,16 +2,16 @@ import json
 import logging
 import uuid
 
-from eth_utils import remove_0x_prefix
 from common_utils_py.agreements.service_agreement import ServiceAgreement
 from common_utils_py.agreements.service_factory import ServiceDescriptor, ServiceFactory
 from common_utils_py.agreements.service_types import ServiceTypes
-from common_utils_py.metadata.metadata import Metadata
 from common_utils_py.ddo.ddo import DDO
 from common_utils_py.ddo.metadata import MetadataMain
 from common_utils_py.ddo.public_key_rsa import PUBLIC_KEY_TYPE_RSA
 from common_utils_py.did import DID, did_to_id, did_to_id_bytes
+from common_utils_py.metadata.metadata import Metadata
 from common_utils_py.utils.utilities import checksum
+from eth_utils import remove_0x_prefix
 from secret_store_client.client import Client as SecretStore
 
 from nevermined_gateway_events.util import get_config, keeper_instance, web3
@@ -22,7 +22,9 @@ def get_registered_ddo(account, providers=None):
     keeper = keeper_instance()
     aqua = Metadata('http://localhost:5000')
     metadata = get_sample_ddo()['service'][0]['attributes']
-    metadata['main']['files'][0]['url'] = "https://raw.githubusercontent.com/tbertinmahieux/MSongsDB/master/Tasks_Demos/CoverSongs/shs_dataset_test.txt"
+    metadata['main']['files'][0][
+        'url'] = "https://raw.githubusercontent.com/tbertinmahieux/MSongsDB/master/Tasks_Demos" \
+                 "/CoverSongs/shs_dataset_test.txt"
     metadata['main']['files'][0]['checksum'] = str(uuid.uuid4())
     ddo = DDO()
     ddo_service_endpoint = aqua.get_service_endpoint()
@@ -39,6 +41,8 @@ def get_registered_ddo(account, providers=None):
     }}
 
     service_descriptors = [ServiceDescriptor.authorization_service_descriptor(
+        {'main': {'service': 'SecretStore', 'publicKey': '0casd',
+                  'threshold': '1'}},
         'http://localhost:12001')]
     service_descriptors += [ServiceDescriptor.access_service_descriptor(
         access_service_attributes,
