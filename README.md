@@ -5,6 +5,10 @@
 Provider's events handler agent dealing with Keeper Contract events
 
 
+[![Docker Build Status](https://img.shields.io/docker/cloud/build/keykoio/nevermined-gateway-events.svg)](https://hub.docker.com/r/keykoio/nevermined-gateway-events/)
+[![Python package](https://github.com/keyko-io/nevermined-gateway-events/workflows/Python%20package/badge.svg)](https://github.com/keyko-io/nevermined-gateway-events/actions)
+
+
 ## Features
 Monitors ServiceExecutionAgreement events and act as a provider agent to 
 grant access and release reward for the publisher/provider. This is a critical 
