@@ -17,7 +17,7 @@ with open('CHANGELOG.md') as history_file:
 # or pip install -e .
 install_requirements = [
     'common-utils-py==0.2.8',
-    'contracts-lib-py==0.2.4',
+    'contracts-lib-py==0.4.0',
     'ocean-secret-store-client==0.0.2',
     'PyYAML==4.2b4',
 ]
@@ -82,6 +82,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/keyko-io/nevermined-gateway-events',
-    version='0.2.2',
+    version='0.2.3',
     zip_safe=False,
 )
