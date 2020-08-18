@@ -25,16 +25,16 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
+        docker login -u ${{ secrets.NEVERMINED_DOCKER_USERNAME }} -p ${{ secrets.NEVERMINED_DOCKER_TOKEN}}
         git clone https://github.com/keyko-io/nevermined-tools
         cd nevermined-tools
-        export KEEPER_VERSION=v0.2.0
-        export METADATA_VERSION=latest
+        export KEEPER_VERSION=v0.4.1
         rm -rf "${HOME}/.nevermined/nevermined-contracts/artifacts"
-        bash -x start_nevermined.sh --no-commons --no-events-handler --no-gateway --no-faucet --no-dashboard 2>&1 > start_nevermined.log &
+        bash -x start_nevermined.sh --no-commons  --no-gateway --no-faucet --no-dashboard 2>&1 > start_nevermined.log &
         cd ..
         for i in $(seq 1 50); do
           sleep 5
-          [ -f "${HOME}/.nevermined/nvermined-contracts/artifacts/ready" ] && break
+          [ -f "${HOME}/.nevermined/nevermined-contracts/artifacts/ready" ] && break
         done
         ls -la "${HOME}/.nevermined/nevermined-contracts/artifacts/"
         ./scripts/wait_for_migration_and_extract_keeper_artifacts.sh
