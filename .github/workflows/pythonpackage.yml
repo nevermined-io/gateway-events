@@ -30,7 +30,7 @@ jobs:
         cd nevermined-tools
         export KEEPER_VERSION=v0.4.1
         rm -rf "${HOME}/.nevermined/nevermined-contracts/artifacts"
-        bash -x start_nevermined.sh --no-commons  --no-gateway --no-faucet --no-dashboard 2>&1 > start_nevermined.log &
+        bash -x start_nevermined.sh --no-commons  --no-gateway --no-faucet 2>&1 > start_nevermined.log &
         cd ..
         for i in $(seq 1 50); do
           sleep 5
