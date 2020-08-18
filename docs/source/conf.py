@@ -23,12 +23,12 @@ sys.path.insert(0, os.path.abspath('../../'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'ocean-events-handler'
-copyright = 'ocean-events-handler contributors'
-author = 'ocean-events-handler contributors'
+project = 'nevermined-gateway-events'
+copyright = 'nevermined-gateway-events contributors'
+author = 'nevermined-gateway-events contributors'
 
 # The full version, including alpha/beta/rc tags
-release = '0.2.2'
+release = '0.2.3'
 # The short X.Y version
 release_parts = release.split('.')  # a list
 version = release_parts[0] + '.' + release_parts[1]
