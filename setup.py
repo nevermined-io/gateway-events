@@ -55,8 +55,8 @@ for d, _, _ in os.walk('nevermined_gateway_events'):
         packages.append(d.replace(os.path.sep, '.'))
 
 setup(
-    author="keyko-io",
-    author_email='root@keyko.io',
+    author="nevermined-io",
+    author_email='root@nevermined.io',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
@@ -75,13 +75,13 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     include_package_data=True,
-    keywords='nevermined-gateway-events',
-    name='nevermined-gateway-events',
+    keywords='gateway-events',
+    name='gateway-events',
     packages=packages,
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/keyko-io/nevermined-gateway-events',
+    url='https://github.com/nevermined-io/gateway-events',
     version='0.2.3',
     zip_safe=False,
 )

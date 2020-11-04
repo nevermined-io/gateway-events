@@ -1,12 +1,11 @@
-[![banner](https://raw.githubusercontent.com/keyko-io/assets/master/images/logo/nevermined_logo_1.png)](https://nevermined.io)
-
+[![banner](https://raw.githubusercontent.com/nevermined-io/assets/main/images/logo/banner_logo.png)](https://nevermined.io)
 
 # Nevermined Gateway Events
 Provider's events handler agent dealing with Keeper Contract events
 
 
 [![Docker Build Status](https://img.shields.io/docker/cloud/build/keykoio/nevermined-gateway-events.svg)](https://hub.docker.com/r/keykoio/nevermined-gateway-events/)
-[![Python package](https://github.com/keyko-io/nevermined-gateway-events/workflows/Python%20package/badge.svg)](https://github.com/keyko-io/nevermined-gateway-events/actions)
+[![Python package](https://github.com/nevermined-io/gateway-events/workflows/Python%20package/badge.svg)](https://github.com/nevermined-io/gateway-events/actions)
 
 
 ## Features
@@ -29,26 +28,18 @@ Python 3.6
 First, clone this repository:
 
 ```bash
-git clone git@github.com:keyko-io/nevermined-gateway-events.git
-cd events-handler/
+git clone git@github.com:nevermined-io/gateway-events.git
+cd gateway-events/
 ```
 
 Start a keeper node and other services of the ocean network:
 
 ```bash
-git clone git@github.com:keyko-io/nevermined-tools.git
-cd barge
-bash start_nevermined.sh --no-events-handler --no-commons --local-spree-node
+git clone git@github.com:nevermined-io/tools.git
+cd tools
+bash start_nevermined.sh --no-commons --local-spree-node
 ```
 
-Barge is the repository where all the Ocean Docker Compose files are located. 
-We are running the script `start_nevermined.sh`: the easy way to have Ocean projects 
-up and running. We run without an events-handler instance because we will run it directly.
-
-To learn more about Barge, visit [the Barge repository](https://github.com/oceanprotocol/barge).
-
-Note that it runs an Aquarius instance and an Elasticsearch instance but Aquarius can 
-also work with BigchainDB or MongoDB.
 
 Export environment variables `PROVIDER_ADDRESS`, `PROVIDER_PASSWORD`
 and `PROVIDER_KEYFILE` (or `PROVIDER_ENCRYPTED_KEY`). Use the values from the `tox.ini` file, or use 
@@ -64,24 +55,6 @@ export CONFIG_FILE=config.ini
 ./scripts/wait_for_migration_and_extract_keeper_artifacts.sh
 ./start_events_monitor.sh
 ```
-
-Once the events-handler is running, you can use the Ocean API (Squid library available in python, node, 
-and java implementation) to publish an asset and start a consume request. For more details on using the  
-Ocean ecosystem please refer to [Ocean API](https://github.com/oceanprotocol/squid-py/#usage) 
-
-To run the events-handler as a provider, you can either run it from source as described above or 
-use a docker image `docker pull oceanprotocol/events-handler:latest`. To run the docker image 
-please refer to the docker-compose file in barge [events_handler.yml](https://github.com/oceanprotocol/barge/tree/master/compose-files/events_handler.yml)
-
-#### Code style
-
-The information about code style in python is documented in this two links [python-developer-guide](https://github.com/oceanprotocol/dev-ocean/blob/master/doc/development/python-developer-guide.md)
-and [python-style-guide](https://github.com/oceanprotocol/dev-ocean/blob/master/doc/development/python-style-guide.md).
-
-#### Testing
-
-Automatic tests are setup via Travis, executing `tox`.
-Our test use pytest framework.
 
 
 ## Attribution
