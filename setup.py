@@ -19,7 +19,7 @@ install_requirements = [
     'common-utils-py==0.2.8',
     'contracts-lib-py==0.4.0',
     'ocean-secret-store-client==0.0.2',
-    'PyYAML==4.2b4',
+    'PyYAML==5.4',
 ]
 
 # Required to run setup.py:
